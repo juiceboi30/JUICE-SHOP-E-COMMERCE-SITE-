@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>JUICE-SHOP</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+
+      <a href="index.html" class="logo">
+        <img src="./image/logo.png" alt="logo" />
+        <span>JUICE-SHOP</span>
+      </a>
+
+      <nav class="navbar">
+        <a href="index.html" class="active">home</a>
+        <a href="about.html">about</a>
+        <a href="menu.html">menu</a>
+        <a href="products.html">products</a>
+        <a href="review.html">review</a>
+        <a href="contact.html">contact</a>
+        <a href="blog.html">blog</a>
+      </nav>
+
+      <div class="buttons">
+        <button id="search-btn"><i class="fas fa-search"></i></button>
+        <button id="cart-btn"><i class="fas fa-shopping-cart"></i></button>
+        <button id="theme-btn"><i class="fas fa-moon"></i></button>
+        <button id="menu-btn"><i class="fas fa-bars"></i></button>
+      </div>
+
+      <!-- Search form -->
+      <div class="search-form">
+        <input
+          type="text"
+          class="search-input"
+          id="search-box"
+          placeholder="Search"
+        />
+        <i class="fas fa-search"></i>
+      </div>
+
+      <!-- CART PANEL -->
+      <div class="cart-items-container">
+        <h3 class="cart-title">Your Cart</h3>
+        <div class="cart-items-list">
+          <!-- items rendered by JS -->
+        </div>
+
+        <div class="cart-summary">
+          <div class="cart-row">
+            <span>Items:</span>
+            <span id="cart-items-count">0</span>
+          </div>
+          <div class="cart-row">
+            <span>Total (INR):</span>
+            <span id="cart-total-inr">₹0.00</span>
+          </div>
+          <div class="cart-row">
+            <span>Total (USD):</span>
+            <span id="cart-total-usd">$0.00</span>
+          </div>
+          <div class="cart-row cart-note">
+            <small>Approximate conversion 1 USD ≈ ₹83</small>
+          </div>
+          <a href="#" class="btn">Checkout</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>Fresh Cold-Pressed Juices, Delivered Fast</h3>
+        <p>
+          Build your perfect mix from premium fruits and veggies. Every bottle is
+          pressed fresh and shipped chilled from JUICE-SHOP.
+        </p>
+        <a href="#products" class="btn">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- MENU (example section) -->
+    <section class="menu" id="menu">
+      <h1 class="heading">our <span>menu</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="box-head">
+            <span class="menu-category">signature</span>
+            <h3>Sunrise Orange</h3>
+            <div class="price">
+              ₹199 <span>₹249</span>
+            </div>
+          </div>
+          <p style="font-size:1.4rem;margin-top:1rem;">
+            Fresh orange, a hint of lime, and a touch of Himalayan salt.
+          </p>
+        </div>
+
+        <div class="box">
+          <div class="box-head">
+            <span class="menu-category">detox</span>
+            <h3>Green Cleanser</h3>
+            <div class="price">
+              ₹229 <span>₹279</span>
+            </div>
+          </div>
+          <p style="font-size:1.4rem;margin-top:1rem;">
+            Cucumber, spinach, green apple, and ginger for a clean reset.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS (real Add to Cart) -->
+    <section class="products" id="products">
+      <h1 class="heading">our <span>products</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="box-head">
+            <span class="title">classic ME</span>
+            <a href="#" class="name">Small VEG Burger</a>
+          </div>
+          <div class="image">
+            <img src="./image/pngwing.com (6).png" alt="Tropical Mango" />
+          </div>
+          <div class="box-bottom">
+            <div class="info">
+              <b class="price" data-price="249">₹249</b>
+              <span class="amount">300ml • 210 Cal</span>
+            </div>
+            <div class="product-btn">
+              <a
+                href="#"
+                class="add-to-cart-btn"
+                data-name="Tropical Mango"
+                data-price="249"
+                data-image="./image/pngwing.com (6).png"
+              >
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box-head">
+            <span class="title">CLassic ONE</span>
+            <a href="#" class="name">Medium VEG BURGER</a>
+          </div>
+          <div class="image">
+            <img src="./image/pngwing.com (4).png" alt="Minty Green" />
+          </div>
+          <div class="box-bottom">
+            <div class="info">
+              <b class="price" data-price="279">₹279</b>
+              <span class="amount">300ml • 140 Cal</span>
+            </div>
+            <div class="product-btn">
+              <a
+                href="#"
+                class="add-to-cart-btn"
+                data-name="Minty Green"
+                data-price="279"
+                data-image="./image/pngwing.com (4).png"
+              >
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="box-head">
+            <span class="title">KFC-Online</span>
+            <a href="#" class="name">Large VEG BURGER</a>
+          </div>
+          <div class="image">
+            <img src="./image/pngwing.com (5).png" alt="Berry Protein" />
+          </div>
+          <div class="box-bottom">
+            <div class="info">
+              <b class="price" data-price="329">₹329</b>
+              <span class="amount">350ml • 18g protein</span>
+            </div>
+            <div class="product-btn">
+              <a
+                href="#"
+                class="add-to-cart-btn"
+                data-name="Berry Protein"
+                data-price="329"
+                data-image="./image/pngwing.com (5).png"
+              >
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT (short) -->
+    <section class="about" id="about">
+      <h1 class="heading">about <span>us</span></h1>
+
+      <div class="row">
+        <div class="image">
+          <img src="./image/pngwing.com (7).png" alt="About JUICE-SHOP" />
+        </div>
+        <div class="content">
+          <h3>What makes JUICE-SHOP different?</h3>
+          <p>
+            JUICE-SHOP cold-presses every order fresh with high-quality fruits,
+            veggies, and superfoods. No concentrates or added sugar.
+          </p>
+          <p>
+            From early-morning workouts to late-night study sessions, we deliver
+            bottles that stay chilled and refreshing at your doorstep.
+          </p>
+          <a href="#products" class="btn">Explore Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+      <div class="search">
+        <input type="text" class="search-input" placeholder="Search" />
+        <button class="btn-primary">Search</button>
+      </div>
+
+      <div class="share">
+        <a href="#" class="fab fa-facebook"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+      </div>
+
+
+
+      <div class="credit">
+  Created by 
+  <a href="https://juiceboi30.github.io/myportfolio/" target="_blank" rel="noopener noreferrer">
+    Johnson Koryon
+  </a> 
+  all rights reserved!
+</div>
+
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
